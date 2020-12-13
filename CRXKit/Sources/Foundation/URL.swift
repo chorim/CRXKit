@@ -1,8 +1,8 @@
 //
-//  CRXKit.h
+//  URL.swift
 //  CRXKit
 //
-//  Created by Insu Byeon on 2020/12/04.
+//  Created by Insu Byeon on 2020/12/13.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -16,14 +16,18 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-#import <Foundation/Foundation.h>
+#if canImport(Foundation)
+import Foundation
 
-//! Project version number for CRXKit.
-FOUNDATION_EXPORT double CRXKitVersionNumber;
-
-//! Project version string for CRXKit.
-FOUNDATION_EXPORT const unsigned char CRXKitVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <CRXKit/PublicHeader.h>
-
-
+extension URL {
+    public var queryItems: [String: String] {
+        var params = [String: String]()
+        return URLComponents(url: self, resolvingAgainstBaseURL: false)?
+            .queryItems?
+            .reduce([:], { _, item -> [String: String] in
+                params[item.name] = item.value
+                return params
+            }) ?? [:]
+    }
+}
+#endif

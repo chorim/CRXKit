@@ -1,8 +1,8 @@
 //
-//  UIColor.swift
+//  UIViewController.swift
 //  CRXKit
 //
-//  Created by Insu Byeon on 2020/12/04.
+//  Created by Insu Byeon on 2020/12/13.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -19,25 +19,19 @@
 #if canImport(UIKit)
 import UIKit
 
-extension UIColor {
-    
-    static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat = 1.0) -> UIColor {
-        return .init(
-            red: red / 255,
-            green: green / 255,
-            blue: blue / 255,
-            alpha: alpha
-        )
+extension UIViewController {
+    // MARK: - Keyboard
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
     }
     
-    static func random() -> UIColor {
-        return .rgb(
-            red: .init(arc4random_uniform(255)),
-            green: .init(arc4random_uniform(255)),
-            blue: .init(arc4random_uniform(255)),
-            alpha: .init(arc4random_uniform(10)) / 10
-        )
+    @objc
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
     
 }
+
 #endif
