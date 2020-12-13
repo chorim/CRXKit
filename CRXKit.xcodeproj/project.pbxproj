@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		012C2AB72579C19300F36DDA /* CRXKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 012C2AB52579C19300F36DDA /* CRXKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		012C2AC72579C38000F36DDA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012C2AC62579C38000F36DDA /* UIColor.swift */; };
+		015E19A42585FF23002B18C5 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E19A32585FF23002B18C5 /* UIFont.swift */; };
+		015E19B7258604C2002B18C5 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E19B6258604C2002B18C5 /* UIViewController.swift */; };
+		015E19BB25860640002B18C5 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E19BA25860640002B18C5 /* URL.swift */; };
+		015E19BF258606D4002B18C5 /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E19BE258606D4002B18C5 /* CGSize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +20,10 @@
 		012C2AB52579C19300F36DDA /* CRXKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRXKit.h; sourceTree = "<group>"; };
 		012C2AB62579C19300F36DDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		012C2AC62579C38000F36DDA /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		015E19A32585FF23002B18C5 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		015E19B6258604C2002B18C5 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		015E19BA25860640002B18C5 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		015E19BE258606D4002B18C5 /* CGSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGSize.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,8 @@
 		012C2ABE2579C1D400F36DDA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				015E19BD258606C7002B18C5 /* CoreGraphics */,
+				015E19B92586062C002B18C5 /* Foundation */,
 				012C2AC52579C37500F36DDA /* UIKit */,
 			);
 			path = Sources;
@@ -75,8 +85,26 @@
 			isa = PBXGroup;
 			children = (
 				012C2AC62579C38000F36DDA /* UIColor.swift */,
+				015E19A32585FF23002B18C5 /* UIFont.swift */,
+				015E19B6258604C2002B18C5 /* UIViewController.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		015E19B92586062C002B18C5 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				015E19BA25860640002B18C5 /* URL.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		015E19BD258606C7002B18C5 /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				015E19BE258606D4002B18C5 /* CGSize.swift */,
+			);
+			path = CoreGraphics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,7 +186,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				015E19A42585FF23002B18C5 /* UIFont.swift in Sources */,
 				012C2AC72579C38000F36DDA /* UIColor.swift in Sources */,
+				015E19BF258606D4002B18C5 /* CGSize.swift in Sources */,
+				015E19B7258604C2002B18C5 /* UIViewController.swift in Sources */,
+				015E19BB25860640002B18C5 /* URL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
