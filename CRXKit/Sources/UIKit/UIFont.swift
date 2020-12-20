@@ -21,7 +21,7 @@ import UIKit
 
 extension UIFont {
     
-    static func AppleSDGothic(fontSize: CGFloat, weight: Weight) -> UIFont {
+    public static func AppleSDGothic(fontSize: CGFloat, weight: Weight) -> UIFont {
         var fontName: String = "AppleSDGothicNeo-Regular"
         switch weight {
         case .thin: fontName = "AppleSDGothicNeo-Thin"
@@ -45,31 +45,31 @@ extension UIFont {
         return font
     }
 
-    static func AppleSDGothicNeoThin(_ fontSize: CGFloat) -> UIFont {
+    public static func AppleSDGothicNeoThin(_ fontSize: CGFloat) -> UIFont {
         return .AppleSDGothic(fontSize: fontSize, weight: .thin)
     }
     
-    static func AppleSDGothicNeoUltraLight(_ fontSize: CGFloat) -> UIFont {
+    public static func AppleSDGothicNeoUltraLight(_ fontSize: CGFloat) -> UIFont {
         return .AppleSDGothic(fontSize: fontSize, weight: .ultraLight)
     }
     
-    static func AppleSDGothicNeoSemiBold(_ fontSize: CGFloat) -> UIFont {
+    public static func AppleSDGothicNeoSemiBold(_ fontSize: CGFloat) -> UIFont {
          return .AppleSDGothic(fontSize: fontSize, weight: .semibold)
     }
     
-    static func AppleSDGothicNeoMedium(_ fontSize: CGFloat) -> UIFont {
+    public static func AppleSDGothicNeoMedium(_ fontSize: CGFloat) -> UIFont {
         return .AppleSDGothic(fontSize: fontSize, weight: .medium)
     }
     
-    static func AppleSDGothicNeoRegular(_ fontSize: CGFloat) -> UIFont {
+    public static func AppleSDGothicNeoRegular(_ fontSize: CGFloat) -> UIFont {
         return .AppleSDGothic(fontSize: fontSize, weight: .regular)
     }
     
-    static func AppleSDGothicNeoBold(_ fontSize: CGFloat) -> UIFont {
+    public static func AppleSDGothicNeoBold(_ fontSize: CGFloat) -> UIFont {
         return .AppleSDGothic(fontSize: fontSize, weight: .bold)
     }
     
-    static func AppleSDGothicNeoLight(_ fontSize: CGFloat) -> UIFont {
+    public static func AppleSDGothicNeoLight(_ fontSize: CGFloat) -> UIFont {
         return .AppleSDGothic(fontSize: fontSize, weight: .light)
     }
     

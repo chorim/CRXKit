@@ -20,7 +20,7 @@
 import CoreGraphics
 
 extension CGSize {
-    static func aspectFit(aspectRatio: CGSize, boundingSize: CGSize) -> CGSize {
+    public static func aspectFit(aspectRatio: CGSize, boundingSize: CGSize) -> CGSize {
         guard
             aspectRatio != .zero,
             boundingSize != .zero
