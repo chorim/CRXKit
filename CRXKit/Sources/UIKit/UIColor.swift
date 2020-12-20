@@ -21,7 +21,7 @@ import UIKit
 
 extension UIColor {
     
-    static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat = 1.0) -> UIColor {
+    public static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat = 1.0) -> UIColor {
         return .init(
             red: red / 255,
             green: green / 255,
@@ -30,7 +30,7 @@ extension UIColor {
         )
     }
     
-    static func random() -> UIColor {
+    public static func random() -> UIColor {
         return .rgb(
             red: .init(arc4random_uniform(255)),
             green: .init(arc4random_uniform(255)),
