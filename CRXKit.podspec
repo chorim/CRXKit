@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "CRXKit"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "Choim eXtension Kit"
 
   spec.description  = <<-DESC
@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
 
   spec.platform     = :ios, "11.0"
 
-  spec.source       = { :git => "https://github.com/chorim/CRXKit.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/chorim/CRXKit.git", :tag => "#{spec.version}", :branch => 'main' }
 
 
   spec.source_files  = "CRXKit", "CRXKit/Sources/**/*.{swift,h,m}"
