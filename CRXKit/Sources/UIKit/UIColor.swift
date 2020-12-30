@@ -62,12 +62,21 @@ extension UIColor {
     }
     
     /// Returns a random `UIColor` with random transparency
-    public static func random() -> UIColor {
+    public static func random(withAlpha: Bool) -> UIColor {
         return .rgb(
             red: .init(arc4random_uniform(255)),
             green: .init(arc4random_uniform(255)),
             blue: .init(arc4random_uniform(255)),
-            alpha: .init(arc4random_uniform(10)) / 10
+            alpha: withAlpha ? .init(arc4random_uniform(10)) / 10 : 1.0
+        )
+    }
+
+    public static func random(alpha: CGFloat = 1.0) -> UIColor {
+        return .rgb(
+            red: .init(arc4random_uniform(255)),
+            green: .init(arc4random_uniform(255)),
+            blue: .init(arc4random_uniform(255)),
+            alpha: alpha
         )
     }
     
