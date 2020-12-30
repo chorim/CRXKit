@@ -19,8 +19,39 @@
 #if canImport(UIKit)
 import UIKit
 
+postfix operator %
+infix operator ~
+
+extension Double {
+    /// Returns an exactly percentage value
+    public static postfix func %(number: Double) -> Double {
+        if number >= 100 { return 1.0 }
+        let divisor = pow(10.0, Double(2))
+        return floor(number * 0.01 * divisor) / divisor
+    }
+    
+    /// Returns a `UIColor` with alpha transparency
+    public static func ~(lhs: UIColor, rhs: Double) -> UIColor {
+        return lhs.withAlphaComponent(CGFloat(rhs))
+    }
+    
+}
+
+extension Int {
+    /// Returns a `UIColor` with non transparency
+    public var color: UIColor {
+        return .init(
+            red: CGFloat((self & 0xFF0000) >> 16) / 0xFF,
+            green: CGFloat((self & 0x00FF00) >> 8) / 0xFF,
+            blue: CGFloat(self & 0x0000FF) / 0xFF,
+            alpha: 1.0
+        )
+    }
+}
+
 extension UIColor {
     
+    /// Returns a `UIColor`
     public static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat = 1.0) -> UIColor {
         return .init(
             red: red / 255,
@@ -30,6 +61,7 @@ extension UIColor {
         )
     }
     
+    /// Returns a random `UIColor` with random transparency
     public static func random() -> UIColor {
         return .rgb(
             red: .init(arc4random_uniform(255)),
